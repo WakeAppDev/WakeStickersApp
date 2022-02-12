@@ -7,10 +7,28 @@
 
 import SwiftUI
 
+struct emoji{
+    let name: String
+    
+}
+
 struct ContentView: View {
+    var emojisList = [
+        emoji(name: "happy"),
+        emoji(name: "sad"),
+        emoji(name: "surprised"),
+        emoji(name: "angry"),
+    ]
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+        List(emojisList, id: \.name) { emoji in
+            NavigationLink(destination: EmojisDetailView(Emoji:emoji)){
+              HStack {
+                Text(emoji.name)
+              }
+        }
+        }.navigationTitle("Deacon's Emojis")
+        }
     }
 }
 

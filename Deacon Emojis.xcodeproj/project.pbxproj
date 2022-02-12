@@ -14,6 +14,7 @@
 		698896E827B84A8A0006528E /* Deacon_EmojisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698896E727B84A8A0006528E /* Deacon_EmojisTests.swift */; };
 		698896F227B84A8A0006528E /* Deacon_EmojisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698896F127B84A8A0006528E /* Deacon_EmojisUITests.swift */; };
 		698896F427B84A8A0006528E /* Deacon_EmojisUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698896F327B84A8A0006528E /* Deacon_EmojisUITestsLaunchTests.swift */; };
+		6988970127B84C510006528E /* EmojisDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6988970027B84C500006528E /* EmojisDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		698896ED27B84A8A0006528E /* Deacon EmojisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Deacon EmojisUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		698896F127B84A8A0006528E /* Deacon_EmojisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deacon_EmojisUITests.swift; sourceTree = "<group>"; };
 		698896F327B84A8A0006528E /* Deacon_EmojisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deacon_EmojisUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6988970027B84C500006528E /* EmojisDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojisDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				698896D827B84A850006528E /* ContentView.swift */,
 				698896DA27B84A8A0006528E /* Assets.xcassets */,
 				698896DC27B84A8A0006528E /* Preview Content */,
+				6988970027B84C500006528E /* EmojisDetailView.swift */,
 			);
 			path = "Deacon Emojis";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				698896D927B84A850006528E /* ContentView.swift in Sources */,
+				6988970127B84C510006528E /* EmojisDetailView.swift in Sources */,
 				698896D727B84A850006528E /* Deacon_EmojisApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
