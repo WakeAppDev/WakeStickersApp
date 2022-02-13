@@ -8,19 +8,24 @@
 import SwiftUI
 
 struct EmojisDetailView: View {
-    let Emoji:emoji
+    let emoji:Emoji
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+        VStack {
+            Image(emoji.index)
+            Text(emoji.name)
+            Spacer()
+        }
+      }
 }
 
 struct EmojisDetailView_Previews: PreviewProvider {
     static var previews: some View {
         EmojisDetailView(
-        Emoji: <#T##emoji#>(
+        emoji: Emoji(
             id:0,
-            name:"happy"
+            name:"happy",
+            index: "01"
         )
         )
     }

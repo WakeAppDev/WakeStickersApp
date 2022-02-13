@@ -7,27 +7,38 @@
 
 import SwiftUI
 
-struct emoji{
-    let name: String
+//create an object class called "emoji"
+struct Emoji: Identifiable{
+    let id: Int
     
+    let name: String
+    let index: String
 }
 
 struct ContentView: View {
-    var emojisList = [
-        emoji(name: "happy"),
-        emoji(name: "sad"),
-        emoji(name: "surprised"),
-        emoji(name: "angry"),
+    //let’s make our variable a @State variable so that as soon as we change its value our view updates automatically
+    @State var emojisList = [
+        Emoji(id:0, name: "happy", index:"01"),
+        Emoji(id:1, name: "sad", index:"02"),
+        Emoji(id:2, name: "surprised", index:"03"),
+        Emoji(id:3, name: "angry", index:"04"),
     ]
     var body: some View {
         NavigationView{
-        List(emojisList, id: \.name) { emoji in
-            NavigationLink(destination: EmojisDetailView(Emoji:emoji)){
-              HStack {
-                Text(emoji.name)
+        List(emojisList) { Emoji in
+            NavigationLink(destination: EmojisDetailView(emoji:Emoji)){
+              VStack {
+                Text(Emoji.name)
               }
         }
         }.navigationTitle("Deacon's Emojis")
+                .toolbar {
+                   ToolbarItemGroup(placement: .navigationBarTrailing) {
+                                    Button("Press") {
+                                        
+                                    }
+                    }
+                }
         }
     }
 }
