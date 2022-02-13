@@ -13,7 +13,10 @@ struct EmojisDetailView: View {
     var body: some View {
         VStack {
             Image(emoji.index)
+                .resizable()
+                .frame(width: 200, height: 200)
             Text(emoji.name)
+                .foregroundColor(Color.yellow)
             Spacer()
         }
       }

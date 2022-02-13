@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		694855C527B98C7400B1B286 /* TabView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694855C427B98C7400B1B286 /* TabView1.swift */; };
+		694855C727B98C8900B1B286 /* TabView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694855C627B98C8900B1B286 /* TabView2.swift */; };
 		698896D727B84A850006528E /* Deacon_EmojisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698896D627B84A850006528E /* Deacon_EmojisApp.swift */; };
 		698896D927B84A850006528E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698896D827B84A850006528E /* ContentView.swift */; };
 		698896DB27B84A8A0006528E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698896DA27B84A8A0006528E /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		694855C427B98C7400B1B286 /* TabView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView1.swift; sourceTree = "<group>"; };
+		694855C627B98C8900B1B286 /* TabView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView2.swift; sourceTree = "<group>"; };
 		698896D327B84A850006528E /* Deacon Emojis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deacon Emojis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		698896D627B84A850006528E /* Deacon_EmojisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deacon_EmojisApp.swift; sourceTree = "<group>"; };
 		698896D827B84A850006528E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		694855C327B98C5300B1B286 /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				694855C427B98C7400B1B286 /* TabView1.swift */,
+				694855C627B98C8900B1B286 /* TabView2.swift */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
 		698896CA27B84A850006528E = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +109,7 @@
 		698896D527B84A850006528E /* Deacon Emojis */ = {
 			isa = PBXGroup;
 			children = (
+				694855C327B98C5300B1B286 /* TabViews */,
 				698896D627B84A850006528E /* Deacon_EmojisApp.swift */,
 				698896D827B84A850006528E /* ContentView.swift */,
 				698896DA27B84A8A0006528E /* Assets.xcassets */,
@@ -260,6 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				694855C527B98C7400B1B286 /* TabView1.swift in Sources */,
+				694855C727B98C8900B1B286 /* TabView2.swift in Sources */,
 				698896D927B84A850006528E /* ContentView.swift in Sources */,
 				6988970127B84C510006528E /* EmojisDetailView.swift in Sources */,
 				698896D727B84A850006528E /* Deacon_EmojisApp.swift in Sources */,

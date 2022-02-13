@@ -16,29 +16,18 @@ struct Emoji: Identifiable{
 }
 
 struct ContentView: View {
-    //let’s make our variable a @State variable so that as soon as we change its value our view updates automatically
-    @State var emojisList = [
-        Emoji(id:0, name: "happy", index:"01"),
-        Emoji(id:1, name: "sad", index:"02"),
-        Emoji(id:2, name: "surprised", index:"03"),
-        Emoji(id:3, name: "angry", index:"04"),
-    ]
     var body: some View {
-        NavigationView{
-        List(emojisList) { Emoji in
-            NavigationLink(destination: EmojisDetailView(emoji:Emoji)){
-              VStack {
-                Text(Emoji.name)
-              }
-        }
-        }.navigationTitle("Deacon's Emojis")
-                .toolbar {
-                   ToolbarItemGroup(placement: .navigationBarTrailing) {
-                                    Button("Press") {
-                                        
-                                    }
-                    }
-                }
+        //Create the Tab Bar
+        TabView{
+            TabView1().tabItem(){
+                Image(systemName:"face.smiling")
+                Text("Stickers")
+            }
+            TabView2().tabItem(){
+                Image(systemName:"info.circle")
+                Text("About")
+            }
+            
         }
     }
 }
