@@ -8,28 +8,28 @@
 import SwiftUI
 
 struct EmojisDetailView: View {
-    let emoji:Emoji
-    
-    var body: some View {
-        VStack {
-            Image(emoji.index)
-                .resizable()
-                .frame(width: 200, height: 200)
-            Text(emoji.name)
-                .foregroundColor(Color.yellow)
-            Spacer()
-        }
-      }
-}
+    var emojis : Emojis
 
-struct EmojisDetailView_Previews: PreviewProvider {
+    var body: some View {
+
+        VStack (alignment: .center, spacing: 8.0){
+            Image(emojis.Index)
+                .resizable(resizingMode:.stretch)
+                .aspectRatio(contentMode:.fit)
+                .frame(width:140, height: 180)
+            
+            Text(emojis.name.uppercased())
+                .font(.title)
+                .fontWeight(.heavy)
+                .frame(maxWidth:.infinity, alignment:.center)
+        }
+        
+        
+            }
+        }
+
+struct EmojiDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        EmojisDetailView(
-        emoji: Emoji(
-            id:0,
-            name:"happy",
-            index: "01"
-        )
-        )
-    }
+        EmojisDetailView(emojis: emojisList[0])
+}
 }
