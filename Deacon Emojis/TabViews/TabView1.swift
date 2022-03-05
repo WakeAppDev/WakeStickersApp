@@ -1,9 +1,4 @@
-//
-//  TabView1.swift
-//  Deacon Emojis
-//
-//  Created by 张开新 on 2/13/22.
-//
+
 
 import SwiftUI
 
@@ -13,31 +8,42 @@ struct TabView1: View {
     var body: some View {
    NavigationView {
             ScrollView{
-                LazyVGrid(columns: columns, spacing:15){
-                ForEach(emojisList){Emojis in
-                    NavigationLink(destination: EmojisDetailView(emojis:Emojis)){
-                        VStack{
-                  EmojisCard(emojis: Emojis)
-            }
+                LazyVGrid(columns: columns, spacing: 15){
+                ForEach(emojisList) {Emojis in
+                    NavigationLink(destination: EmojisDetailView(emojis:Emojis)) {
+                        VStack {
+                            EmojisCard(emojis: Emojis)
+                        }
                     }
+                }
             }
-        }
             .padding()
-        }
+            }
             .navigationTitle ("Deacon's Emojis")
             .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 Button("Press") {
             }
                 }
-                 }
+            }
+        }
     }
-        
 }
-}
-    
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 struct TabView1_Previews: PreviewProvider {
     static var previews: some View {

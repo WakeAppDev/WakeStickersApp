@@ -1,16 +1,11 @@
-//
 //  ContentView.swift
 //  Deacon Emojis
-//
-//  Created by 张开新 on 2/12/22.
-//
 
 import SwiftUI
 
 //create an object class called "emoji"
 struct Emoji: Identifiable{
     let id: Int
-    
     let name: String
     let index: String
 }
@@ -31,6 +26,24 @@ struct ContentView: View {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

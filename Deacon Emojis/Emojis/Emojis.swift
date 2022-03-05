@@ -1,9 +1,3 @@
-//
-//  Emojis.swift
-//  Deacon Emojis
-//
-//  Created by JESSICA on 2/22/22.
-//
 
 import Foundation
 struct Emojis: Identifiable {
@@ -29,7 +23,7 @@ var emojisList = [Emojis(id:0, name: "happy", Index:"01"),
                   Emojis(id:0, name: "reading", Index:"14"),
                   Emojis(id:0, name: "messaging", Index:"15"),
                   Emojis(id:0, name: "mask", Index:"16"),
-                  Emojis(id:0, name: "No Problem", Index:"17"),
+                  Emojis(id:0, name: "No_Problem", Index:"17"),
                   Emojis(id:0, name: "Well..", Index:"18"),
                   Emojis(id:0, name: "confused", Index:"19"),
                   Emojis(id:0, name: "Go Deacs!", Index:"20"),
