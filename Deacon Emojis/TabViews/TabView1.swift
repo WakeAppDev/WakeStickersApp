@@ -21,9 +21,9 @@ struct TabView1: View {
             }
             .navigationTitle ("Deacon's Emojis")
             .toolbar {
-            ToolbarItemGroup(placement: .navigationBarTrailing) {
-                Button("Press") {
-            }
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button("Press") {
+                    }
                 }
             }
         }

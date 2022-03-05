@@ -29,9 +29,17 @@ struct EmojisDetailView: View {
                             }.padding()
                         }.frame(height: 100)
                     }
-                
                 }
             } .navigationBarTitle(emojis.name.uppercased(), displayMode: .automatic)
+                .toolbar {
+                    Button(action: {
+                        if 2 > 1 {}
+                    }, label: {
+                        VStack {
+                            Image(systemName: "square.and.arrow.up") //使用SF符号的引用方法
+                        }
+                    })
+                }
         }
     }
 }
