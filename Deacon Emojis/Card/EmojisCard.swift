@@ -18,7 +18,7 @@ struct EmojisCard: View {
                 .scaledToFit()
 
         }
-        .frame(width:90, height: 160)
+//        .frame(width:90, height: 160)
         .shadow(radius:5)
     }
 
