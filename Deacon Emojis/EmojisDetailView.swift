@@ -8,51 +8,71 @@ struct EmojisDetailView: View {
     var emojis : Emojis
     
     var body: some View {
-        NavigationView{
-            ZStack {
-//            LinearGradient(gradient: Gradient(colors: [.white,.white]),
+        //NavigationView{
+        ScrollView{
+            VStack (spacing: 100){
+//                渐变背景色
+//                LinearGradient(gradient: Gradient(colors: [.white, Color("LightBlue")]),
 //                           startPoint: .topLeading,
-//                           endPoint: .bottomTrailing).edgesIgnoringSafeArea(.all)
-            
-                VStack (alignment: .center, spacing: 0.0){
-                    //NavigationLink (destination: imageDisplay(emojis: emojis)) {
-                        emojiDisplay(emojis: emojis)
-                    //}
-                       
+//                           endPoint:.bottomTrailing).edgesIgnoringSafeArea(.all)
+                
+                
+                Text(emojis.name + " Page")
+                    .font(.system(size: 40, weight: .bold, design: .default))
+                    .foregroundColor(.black)
+                    .padding()
+                
+                VStack (alignment: .center, spacing: 30){
+                    
+                    emojiDisplay(emojis: emojis)
+                    
+                    Spacer()
+                    
                     HStack{
-                        Divider()
                         ScrollView(.horizontal) {
-                            HStack (spacing: 10) {
-                                    ForEach(0..<10) {
-                                        index in SquareView(label: "\(index)")
-                                    }
+                            HStack (spacing: 15) {
+                                SquareView(imageName: "105")
+                                SquareView(imageName: "101")
+                                SquareView(imageName: "102")
+                                SquareView(imageName: "103")
+                                SquareView(imageName: "100")
+                                SquareView(imageName: "104")
                             }.padding()
-                        }.frame(height: 100)
+                        }.frame(height: 150)
                     }
+                    Spacer()
                 }
-            } .navigationBarTitle(emojis.name.uppercased(), displayMode: .automatic)
-                .toolbar {
+            }} .toolbar {
                     Button(action: {
-                        if 2 > 1 {}
+                        print("Yes, bro!")
                     }, label: {
                         VStack {
                             Image(systemName: "square.and.arrow.up") //使用SF符号的引用方法
                         }
                     })
-                }
-        }
+            }
+//            .navigationBarTitle(emojis.name.uppercased(), displayMode: .automatic)
+        //}
     }
 }
         
         
 struct SquareView: View {
-    @State
-    var label: String
+    var imageName: String
+    
     var body: some View {
-        Rectangle().fill(Color.orange).frame(width: 70, height: 70).shadow(radius: 5).cornerRadius(10)
-        Text(label)
+        Button(action: {
+                
+            }, label: {
+                Image(imageName)
+                    .resizable()
+                    .frame(width: 80, height: 80)
+        
+            })
+        }
+        
     }
-}
+
 
 struct emojiDisplay: View {
     //var Index: Int
@@ -63,7 +83,7 @@ struct emojiDisplay: View {
         Image(emojis.Index)
             .resizable(resizingMode:.stretch)
             .aspectRatio(contentMode:.fit)
-            .frame(width:300, height: 300)
+            .frame(width:260, height: 260)
         
         Text(emojis.name.uppercased())
             .font(.title)
@@ -73,20 +93,16 @@ struct emojiDisplay: View {
     }
 }
 
-//struct imageDisplay: View {
-//    //var Index: Int
-//    var emojis : Emojis
-//
-//    var body: some View {
-//        Image(emojis.Index)
-//            .resizable(resizingMode:.stretch)
-//            .aspectRatio(contentMode:.fit)
-//    }
-//}
+
+
+
+
+
+
 
 
 struct EmojiDetailView_Previews: PreviewProvider {
     static var previews: some View {
         EmojisDetailView(emojis: emojisList[0])
-}
+    }
 }

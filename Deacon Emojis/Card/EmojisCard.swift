@@ -21,8 +21,22 @@ struct EmojisCard: View {
 //        .frame(width:90, height: 160)
         .shadow(radius:5)
     }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 struct EmojisCard_Previews: PreviewProvider {
     static var previews: some View {
         EmojisCard(emojis: emojisList[0])
