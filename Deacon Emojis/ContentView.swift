@@ -3,20 +3,27 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    init() {
+        UITabBar.appearance().barTintColor = .white
+        UITabBar.appearance().unselectedItemTintColor = .black
+    }
+    
     var body: some View {
         //Create the Tab Bar
         TabView{
             TabView1().tabItem(){
-                Image(systemName:"face.smiling")
+                Image(systemName:"theatermasks")
                 Text("Stickers")
             }
             TabView2().tabItem(){
-                Image(systemName:"info.circle")
+                Image(systemName:"info")
                 Text("About")
+                    
             }
             
-        }.foregroundColor(Color("New Gold"))
+        }.accentColor(Color("New Gold"))
     }
 }
 

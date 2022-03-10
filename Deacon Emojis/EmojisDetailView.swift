@@ -11,10 +11,6 @@ struct EmojisDetailView: View {
         //NavigationView{
         ScrollView{
             VStack (spacing: 100){
-//                渐变背景色
-//                LinearGradient(gradient: Gradient(colors: [.white, Color("LightBlue")]),
-//                           startPoint: .topLeading,
-//                           endPoint:.bottomTrailing).edgesIgnoringSafeArea(.all)
                 
                 
                 Text(emojis.name + " Page")

@@ -17,7 +17,6 @@ struct EmojisCard: View {
                 .scaledToFit()
 
         }
-//        .shadow(radius:5)
     }
 }
 
