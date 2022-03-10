@@ -29,6 +29,7 @@ extension UIColor {
         self.init(red: newRed, green: newGreen, blue: newBlue, alpha: 1.0)
     }
 }
+
 let newSwiftColor = UIColor(red: 214, green: 177, blue: 96)
 
 struct TabView1: View {
@@ -43,7 +44,7 @@ struct TabView1: View {
         ScrollView{
             LazyVGrid(columns: [GridItem(.flexible(),spacing: 15),GridItem(.flexible())],spacing: 15){
                 ForEach(emojisList) { Emojis in
-                    NavigationLink(destination: EmojisDetailView(emojis:Emojis)) {
+                    NavigationLink(destination: EmojisDetailView(DetiailViewEmojis: Emojis)) {
                         VStack {
                             EmojisCard(emojis: Emojis)
                                 .aspectRatio(2/3, contentMode: .fit)
