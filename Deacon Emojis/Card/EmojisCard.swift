@@ -14,12 +14,10 @@ struct EmojisCard: View {
             Image(emojis.Index)
                 .resizable()
                 .cornerRadius(20)
-                .frame(width:120)
                 .scaledToFit()
 
         }
-//        .frame(width:90, height: 160)
-        .shadow(radius:5)
+//        .shadow(radius:5)
     }
 }
 

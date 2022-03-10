@@ -3,13 +3,6 @@
 
 import SwiftUI
 
-//create an object class called "emoji"
-//struct Emoji: Identifiable{
-//    let id: Int
-//    let name: String
-//    let index: String
-//}
-
 struct ContentView: View {
     var body: some View {
         //Create the Tab Bar
@@ -23,7 +16,7 @@ struct ContentView: View {
                 Text("About")
             }
             
-        }
+        }.foregroundColor(Color("New Gold"))
     }
 }
 
