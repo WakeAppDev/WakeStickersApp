@@ -495,7 +495,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Deacon Emojis/Preview Content\"";
-				DEVELOPMENT_TEAM = KY96BUSCCZ;
+				DEVELOPMENT_TEAM = 9MKCB38264;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save your chosen photo";
@@ -527,7 +527,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Deacon Emojis/Preview Content\"";
-				DEVELOPMENT_TEAM = KY96BUSCCZ;
+				DEVELOPMENT_TEAM = 9MKCB38264;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save your chosen photo";
