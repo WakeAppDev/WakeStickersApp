@@ -1,5 +1,4 @@
 
-
 import SwiftUI
 
 class Theme {

@@ -7,6 +7,7 @@
 
 import XCTest
 
+
 class Deacon_EmojisUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
