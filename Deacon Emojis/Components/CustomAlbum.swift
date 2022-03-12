@@ -5,6 +5,7 @@
 import Photos
 import UIKit
 
+
 struct CustomAlbumError {
     static let notAuthorized = CustomAlbumSavePotentialError(title: "Custom Album Error", description: "Not Authorized", code: 0)
 }

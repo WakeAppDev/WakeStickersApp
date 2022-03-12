@@ -16,6 +16,7 @@ struct EmojisDetailView: View {
 
 
 
+
 struct EmojiDetailView_Previews: PreviewProvider {
     static var previews: some View {
         EmojisDetailView(DetiailViewEmojis: emojisList[0])

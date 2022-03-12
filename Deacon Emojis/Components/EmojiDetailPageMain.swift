@@ -21,34 +21,34 @@ struct EmojiDetailPageMain: View {
         let thisPageEmojiUIimage: UIImage = UIImage(named: thisEmojis.Index)!
 
         ScrollView{
-            VStack (spacing: 100){
+            VStack (spacing: 70){
                 
-                            Text(thisEmojis.name + " Page")
-                                .font(.system(size: 40, weight: .bold, design: .default))
-                                .foregroundColor(.black)
-                                .padding()
-                            
-                            VStack (alignment: .center, spacing: 30){
-                                
-                                emojiDisplay(emojis: thisEmojis)
-                                
-                    Spacer()
+                    Text(thisEmojis.name + " Page")
+                        .font(.system(size: 40, weight: .bold, design: .default))
+                        .foregroundColor(.black)
+                        .padding()
                     
-                    HStack{
-                        ScrollView(.horizontal) {
-                            HStack (spacing: 15) {
-                                //存图按键
-                                SaveImageButton(uiImage: thisPageEmojiUIimage, imageName: "106")
-                                SquareView(imageName: "105")
-                                SquareView(imageName: "101")
-                                SquareView(imageName: "102")
-                                SquareView(imageName: "103")
-                                SquareView(imageName: "100")
-                                SquareView(imageName: "104")
-                            }.padding()
-                        }.frame(height: 150)
-                    }
-                    Spacer()
+                    VStack (alignment: .center, spacing: 30){
+                        
+                        emojiDisplay(emojis: thisEmojis)
+                                
+                        //Spacer()
+                    
+                        HStack{
+                            ScrollView(.horizontal) {
+                                HStack (spacing: 15) {
+                                    //存图按键
+                                    SaveImageButton(uiImage: thisPageEmojiUIimage, imageName: "106")
+                                    SquareView(imageName: "105")
+                                    SquareView(imageName: "101")
+                                    SquareView(imageName: "102")
+                                    SquareView(imageName: "103")
+                                    SquareView(imageName: "100")
+                                    SquareView(imageName: "104")
+                                }.padding()
+                            }.frame(height: 150)
+                        }
+                        Spacer()
                 }
             }} .toolbar {
                     Button(action: {
@@ -92,11 +92,12 @@ struct emojiDisplay: View {
     var emojis : Emojis
 
     var body: some View {
-        VStack{
+        VStack (spacing: 30){
         Image(emojis.Index)
             .resizable(resizingMode:.stretch)
             .aspectRatio(contentMode:.fit)
             .frame(width:260, height: 260)
+            .shadow(color: Color(UIColor(named: "New Gold")!), radius: 60)
 
         Text(emojis.name.uppercased())
             .font(.title)
