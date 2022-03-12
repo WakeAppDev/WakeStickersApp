@@ -2,31 +2,28 @@
 import SwiftUI
 
 struct TabView2: View {
-    init(){
+    
+    init() {
         Theme.navigationBarColors(background:newSwiftColor, titleColor: .white)
         }
+    
     var body: some View {
         NavigationView{
             VStack{
             List{
                 Section{
-                    Button {
-                            print("button 1 tapped")
-                            } label: {
+                    NavigationLink (destination: Privacy()) {
                             Text("Privacy Policy")
-                            }
-                    Button {
-                            print("button 2 tapped")
-                            } label: {
+                        }
+                    NavigationLink (destination: AppDev()) {
                             Text("Contact Us")
-                            }
+                        }
                 }
+                
                 Section{
-                    Button {
-                            print("button 3 tapped")
-                            } label: {
-                            Text("Legal Info")
-                            }
+                    NavigationLink (destination: Legal()) {
+                            Text("Lego Info")
+                        }
                 }
             }
             .navigationTitle ("About")
@@ -36,6 +33,36 @@ struct TabView2: View {
 }
 
 
+struct Privacy: View {
+    
+    var body: some View {
+        Text("Hello, here is privacy view!")
+    }
+}
+
+struct AppDev: View {
+    
+    var body: some View {
+        
+        Text("Hello, here is our home! The AppDev!")
+        Image("AppDev")
+            .resizable(resizingMode:.stretch)
+            .aspectRatio(contentMode:.fit)
+            .frame(width:260, height: 260)
+        Text("Richard, Michael, Jiachen, Jessica")
+        Text("🎩")
+
+
+    }
+}
+
+struct Legal: View {
+    
+    var body: some View {
+        Text("Hello, here is legal information")
+        
+    }
+}
 
 
 
