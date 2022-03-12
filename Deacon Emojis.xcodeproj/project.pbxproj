@@ -20,7 +20,6 @@
 		698896F427B84A8A0006528E /* Deacon_EmojisUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698896F327B84A8A0006528E /* Deacon_EmojisUITestsLaunchTests.swift */; };
 		6988970127B84C510006528E /* EmojisDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6988970027B84C500006528E /* EmojisDetailView.swift */; };
 		FCA8460A27DA732B00EA37D9 /* EmojiDetailPageMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA8460927DA732B00EA37D9 /* EmojiDetailPageMain.swift */; };
-		FCA8461027DA943200EA37D9 /* Error+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA8460F27DA943200EA37D9 /* Error+.swift */; };
 		FCB5665127DAE79000FDD99B /* CustomAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB5665027DAE79000FDD99B /* CustomAlbum.swift */; };
 		FCB5665227DAE79000FDD99B /* CustomAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB5665027DAE79000FDD99B /* CustomAlbum.swift */; };
 		FCB5665327DAE79000FDD99B /* CustomAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB5665027DAE79000FDD99B /* CustomAlbum.swift */; };
@@ -63,7 +62,6 @@
 		698896F327B84A8A0006528E /* Deacon_EmojisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deacon_EmojisUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6988970027B84C500006528E /* EmojisDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojisDetailView.swift; sourceTree = "<group>"; };
 		FCA8460927DA732B00EA37D9 /* EmojiDetailPageMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDetailPageMain.swift; sourceTree = "<group>"; };
-		FCA8460F27DA943200EA37D9 /* Error+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+.swift"; sourceTree = "<group>"; };
 		FCB5665027DAE79000FDD99B /* CustomAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlbum.swift; sourceTree = "<group>"; };
 		FCB5665427DAE79700FDD99B /* Error+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,7 +171,6 @@
 		698896F027B84A8A0006528E /* Deacon EmojisUITests */ = {
 			isa = PBXGroup;
 			children = (
-				FCA8460F27DA943200EA37D9 /* Error+.swift */,
 				698896F127B84A8A0006528E /* Deacon_EmojisUITests.swift */,
 				698896F327B84A8A0006528E /* Deacon_EmojisUITestsLaunchTests.swift */,
 			);
@@ -350,7 +347,6 @@
 				FCB5665327DAE79000FDD99B /* CustomAlbum.swift in Sources */,
 				FCB5665727DAE79700FDD99B /* Error+.swift in Sources */,
 				698896F227B84A8A0006528E /* Deacon_EmojisUITests.swift in Sources */,
-				FCA8461027DA943200EA37D9 /* Error+.swift in Sources */,
 				698896F427B84A8A0006528E /* Deacon_EmojisUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
