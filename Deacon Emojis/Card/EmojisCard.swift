@@ -13,7 +13,6 @@ struct EmojisCard: View {
         ZStack(alignment:.bottom){
             Image(emojis.Index)
                 .resizable()
-                .cornerRadius(20)
                 .scaledToFit()
 
         }

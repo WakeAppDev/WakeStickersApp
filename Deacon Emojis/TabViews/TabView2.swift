@@ -2,15 +2,17 @@
 import SwiftUI
 
 struct TabView2: View {
-    
+//    let newSwiftColor2 = UIColor(red: 242, green: 242, blue: 247)
     init() {
         Theme.navigationBarColors(background:newSwiftColor, titleColor: .white)
+//        UITableView.appearance().backgroundColor = newSwiftColor2
+        
         }
     
     var body: some View {
         NavigationView{
             VStack{
-            List{
+            Form{
                 Section{
                     NavigationLink (destination: Privacy()) {
                             Text("Privacy Policy")
@@ -26,6 +28,8 @@ struct TabView2: View {
                         }
                 }
             }
+            .padding(.top, 1)
+            .background(Color("New Gold"))
             .navigationTitle ("About")
             }
         }

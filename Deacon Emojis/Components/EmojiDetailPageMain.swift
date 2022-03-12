@@ -41,7 +41,18 @@ struct EmojiDetailPageMain: View {
                                     SaveImageButton(uiImage: thisPageEmojiUIimage, imageName: "106")
                                     SquareView(imageName: "105")
                                     SquareView(imageName: "101")
-                                    SquareView(imageName: "102")
+//                                  instagram分享到快拍
+                                    if InstagramSharingUtils.canOpenInstagramStories {
+                                            Button(action: {
+                                              InstagramSharingUtils.shareToInstagramStories(thisPageEmojiUIimage)
+                                            }) {
+                                                Image("102").resizable()
+                                                    .frame(width: 80, height: 80)
+                                            }
+                                          } else {
+                                              Image("102").resizable()
+                                                  .frame(width: 80, height: 80)
+                                          }
                                     SquareView(imageName: "103")
                                     SquareView(imageName: "100")
                                     SquareView(imageName: "104")
@@ -50,15 +61,16 @@ struct EmojiDetailPageMain: View {
                         }
                         Spacer()
                 }
-            }} .toolbar {
-                    Button(action: {
-                        print("Yes, bro!")
-                    }, label: {
-                        VStack {
-                            Image(systemName: "square.and.arrow.up") //使用SF符号的引用方法
-                        }
-                    })
-            }
+            }}
+//        .toolbar {
+//                    Button(action: {
+//                        print("Yes, bro!")
+//                    }, label: {
+//                        VStack {
+//                            Image(systemName: "square.and.arrow.up") //使用SF符号的引用方法
+//                        }
+//                    })
+//            }
         
 //        func loadImage() {
 //            guard let inputImage = SaveUIImage else {
@@ -140,6 +152,8 @@ func saveToAlbum(named: String, image: UIImage) {
         }
     }
 }
+
+
 
 
 

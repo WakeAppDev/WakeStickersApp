@@ -9,6 +9,7 @@ struct ContentView: View {
     init() {
         UITabBar.appearance().barTintColor = .white
         UITabBar.appearance().unselectedItemTintColor = .black
+        UITabBar.appearance().isOpaque = false
     }
     
     var body: some View {
