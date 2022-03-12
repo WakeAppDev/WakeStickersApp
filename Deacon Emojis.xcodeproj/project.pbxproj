@@ -61,7 +61,7 @@
 		698896F127B84A8A0006528E /* Deacon_EmojisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deacon_EmojisUITests.swift; sourceTree = "<group>"; };
 		698896F327B84A8A0006528E /* Deacon_EmojisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deacon_EmojisUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6988970027B84C500006528E /* EmojisDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojisDetailView.swift; sourceTree = "<group>"; };
-		FCA8460927DA732B00EA37D9 /* EmojiDetailPageMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDetailPageMain.swift; sourceTree = "<group>"; };
+		FCA8460927DA732B00EA37D9 /* EmojiDetailPageMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDetailPageMain.swift; sourceTree = "<group>"; tabWidth = 5; };
 		FCB5665027DAE79000FDD99B /* CustomAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlbum.swift; sourceTree = "<group>"; };
 		FCB5665427DAE79700FDD99B /* Error+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
