@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct TabView2: View {
@@ -6,7 +5,6 @@ struct TabView2: View {
     init() {
         Theme.navigationBarColors(background:newSwiftColor, titleColor: .white)
 //        UITableView.appearance().backgroundColor = newSwiftColor2
-        
         }
     
     var body: some View {
@@ -28,10 +26,11 @@ struct TabView2: View {
                         }
                 }
             }
-            .padding(.top, 1)
             .background(Color("New Gold"))
+            .padding(.top, 0.5)
             .navigationTitle ("About")
             }
+            
         }
     }
 }
@@ -47,16 +46,45 @@ struct Privacy: View {
 struct AppDev: View {
     
     var body: some View {
+        HStack {
+            VStack{
+                Text("WFU AppDev")
+                    .font(.system(size: 30, weight: .bold, design: .serif))
+                    .foregroundColor(.black)
+                    .shadow(color: Color.black.opacity(0.2), radius: 0.6, x: 2, y: 2)
+                    .frame(alignment: .leading)
+                    .padding(.horizontal, 30)
+            }
+            Spacer()
+            Image("AppIcon")
+                .resizable()
+                .frame(width: 100, height: 100)
+                .padding(.horizontal, 10)
+            
+        }.frame(alignment: .topLeading)
         
-        Text("Hello, here is our home! The AppDev!")
-        Image("AppDev")
-            .resizable(resizingMode:.stretch)
-            .aspectRatio(contentMode:.fit)
-            .frame(width:260, height: 260)
-        Text("Richard, Michael, Jiachen, Jessica")
-        Text("🎩")
-
-
+        
+        VStack {
+            
+            Image("AppDev")
+                .resizable(resizingMode:.stretch)
+                .aspectRatio(contentMode:.fit)
+                .frame(width:290, height: 290)
+            Text("WFUAppDev@outlook.com")
+                .font(.system(size: 22, weight: .bold, design: .monospaced))
+                .foregroundColor(.blue)
+                .padding(.bottom, 2)
+            Text("Richard, Michael, Jiachen, Jessica")
+                .font(.system(size: 16, weight: .bold, design: .monospaced))
+                .foregroundColor(.black)
+                .padding(.bottom,2)
+            Text("🎩")
+                .font(.system(size: 20, weight: .bold, design: .monospaced))
+            Spacer()
+            
+        }
+        
+        
     }
 }
 

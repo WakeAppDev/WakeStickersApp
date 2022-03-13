@@ -46,7 +46,7 @@ struct TabView1: View {
                     NavigationLink(destination: EmojisDetailView(DetiailViewEmojis: Emojis)) {
                         VStack {
                             EmojisCard(emojis: Emojis)
-                                .aspectRatio(2/3, contentMode: .fit)
+                                .aspectRatio(contentMode: .fit)
                             Text(Emojis.name)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("New Gold"))

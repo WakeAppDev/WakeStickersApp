@@ -21,64 +21,82 @@ struct EmojiDetailPageMain: View {
         let thisPageEmojiUIimage: UIImage = UIImage(named: thisEmojis.Index)!
 
         ScrollView{
-            VStack (spacing: 70){
+            VStack (spacing: 40){
                 
-                    Text(thisEmojis.name + " Page")
-                        .font(.system(size: 40, weight: .bold, design: .default))
-                        .foregroundColor(.black)
-                        .padding()
+                topBarView(emojis: thisEmojis)
+                    .padding(.bottom, 30)
+                
+                
+                VStack (alignment: .center, spacing: 30){
                     
-                    VStack (alignment: .center, spacing: 30){
-                        
-                        emojiDisplay(emojis: thisEmojis)
-                                
-                        //Spacer()
-                    
-                        HStack{
-                            ScrollView(.horizontal) {
-                                HStack (spacing: 15) {
-                                    //存图按键
-                                    SaveImageButton(uiImage: thisPageEmojiUIimage, imageName: "106")
-                                    SquareView(imageName: "105")
-//                                  SquareView(imageName: "101")
+                    emojiDisplay(emojis: thisEmojis)
+                
+                    HStack{
+                        ScrollView(.horizontal) {
+                            HStack (spacing: 15) {
+                                //存图按键
+                                SaveImageButton(uiImage: thisPageEmojiUIimage, imageName: "106")
+                                //跳转iMessage分享图片
+                                iMessageView(imageName: "105", emojis: thisEmojis)
+            
+                                SquareView(imageName: "101")
 //                                  instagram分享到快拍
-                                    if InstagramSharingUtils.canOpenInstagramStories {
-                                            Button(action: {
-                                              InstagramSharingUtils.shareToInstagramStories(thisPageEmojiUIimage)
-                                            }) {
-                                                Image("102").resizable()
-                                                    .frame(width: 80, height: 80)
-                                            }
-                                          } else {
-                                              Image("102").resizable()
-                                                  .frame(width: 80, height: 80)
-                                          }
-                                    SquareView(imageName: "103")
-                                    SquareView(imageName: "100")
-                                    SquareView(imageName: "104")
-                                }.padding()
-                            }.frame(height: 150)
-                        }
-                        Spacer()
-                }
-            }}.toolbar {
-                        ToolbarItemGroup(placement: .navigationBarTrailing) {
-                            Button(action: {
-                                guard let image1 = UIImage(named: thisEmojis.Index) else { return }
-                                let activityVC = UIActivityViewController(activityItems: [image1], applicationActivities: nil)
-                                        UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
-                            }, label:{
-                                Image(systemName: "square.and.arrow.up")
-                            }
-                    )}
-                }
-        
-//        func loadImage() {
-//            guard let inputImage = SaveUIImage else {
-//                image = Image(uiImage: inputImage)
-//            }
-//        }
+                                if InstagramSharingUtils.canOpenInstagramStories {
+                                        Button(action: {
+                                          InstagramSharingUtils.shareToInstagramStories(thisPageEmojiUIimage)
+                                        }) {
+                                            Image("102").resizable()
+                                                .frame(width: 80, height: 80)
+                                        }
+                                      } else {
+                                          Image("102").resizable()
+                                              .frame(width: 80, height: 80)
+                                      }
+                                SquareView(imageName: "103")
+                                SquareView(imageName: "100")
+                                SquareView(imageName: "104")
+                            }.padding()
+                        }.frame(height: 150)
+                    }
+                    Spacer()
+            }
+        }}.toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                Button(action: {
+                    guard let image1 = UIImage(named: thisEmojis.Index) else { return }
+                    let activityVC = UIActivityViewController(activityItems: [image1], applicationActivities: nil)
+                    UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
 
+                }, label:{
+                    Image(systemName: "square.and.arrow.up")
+                }
+        )}
+      }
+    }
+}
+
+
+struct topBarView: View {
+    var emojis : Emojis
+    
+    var body: some View {
+        HStack {
+            //VStack{
+                Text(emojis.name + " Deacon")
+                    .font(.system(size: 33, weight: .bold, design: .serif))
+                    .foregroundColor(.black)
+                    .shadow(color: Color.black.opacity(0.2), radius: 2, x: 5, y: 5)
+                    .frame(alignment: .leading)
+                    .padding(.horizontal, 30)
+            //}
+//            Spacer()
+//            Image("AppDev")
+//                .resizable()
+//                .frame(width: 100, height: 100)
+//                .padding(.horizontal, 10)
+                
+        }.padding(.top, 25)
+        
     }
 }
 
@@ -96,27 +114,28 @@ struct SquareView: View {
 
         })
     }
-
 }
 
 //Emoji图片展示➕Emoji名称展示
 struct emojiDisplay: View {
-    //var Index: Int
     var emojis : Emojis
 
     var body: some View {
-        VStack (spacing: 30){
+        VStack (spacing: 27){
         Image(emojis.Index)
-            .resizable(resizingMode:.stretch)
+            .resizable()
             .aspectRatio(contentMode:.fit)
-            .frame(width:260, height: 260)
+            .frame(width:240, height: 240)
             .shadow(color: Color(UIColor(named: "New Gold")!), radius: 60)
 
-        Text(emojis.name.uppercased())
-            .font(.title)
-            .fontWeight(.heavy)
+        Text(emojis.name)
+            .font(.system(size: 28, weight: .bold, design: .serif))
+            .foregroundColor(Color.black.opacity(0.8))
+            .padding(.top, 3)
             .frame(maxWidth:.infinity, alignment:.center)
         }
+        //.frame(width: 330, height: 330, alignment: .center)
+        //.cornerRadius(30)
     }
 }
 
@@ -132,6 +151,8 @@ struct SaveImageButton: View {
         }, label: {
             Image(imageName)
                 .resizable()
+                .cornerRadius(10)
+                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 5, y: 5)
                 .frame(width: 80, height: 80)
         })
     }
@@ -153,6 +174,36 @@ func saveToAlbum(named: String, image: UIImage) {
         }
     }
 }
+
+
+//struct message @unchecked Sendable {
+//
+//}
+
+struct iMessageView: View {
+    var imageName: String
+    var emojis: Emojis
+
+    var body: some View {
+    Button(action: {
+        guard let image2 = UIImage(named: emojis.Index) else { return }
+        
+        let activityVC = UIActivityViewController(activityItems: [image2], applicationActivities: nil)
+                UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+        }, label: {
+            Image(imageName)
+                .resizable()
+                .frame(width: 80, height: 80)
+
+        })
+    }
+}
+
+
+
+
+
+
 
 
 
