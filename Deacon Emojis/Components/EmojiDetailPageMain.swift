@@ -40,7 +40,7 @@ struct EmojiDetailPageMain: View {
                                     //存图按键
                                     SaveImageButton(uiImage: thisPageEmojiUIimage, imageName: "106")
                                     SquareView(imageName: "105")
-                                    SquareView(imageName: "101")
+//                                  SquareView(imageName: "101")
 //                                  instagram分享到快拍
                                     if InstagramSharingUtils.canOpenInstagramStories {
                                             Button(action: {
@@ -61,16 +61,17 @@ struct EmojiDetailPageMain: View {
                         }
                         Spacer()
                 }
-            }}
-//        .toolbar {
-//                    Button(action: {
-//                        print("Yes, bro!")
-//                    }, label: {
-//                        VStack {
-//                            Image(systemName: "square.and.arrow.up") //使用SF符号的引用方法
-//                        }
-//                    })
-//            }
+            }}.toolbar {
+                        ToolbarItemGroup(placement: .navigationBarTrailing) {
+                            Button(action: {
+                                guard let image1 = UIImage(named: thisEmojis.Index) else { return }
+                                let activityVC = UIActivityViewController(activityItems: [image1], applicationActivities: nil)
+                                        UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+                            }, label:{
+                                Image(systemName: "square.and.arrow.up")
+                            }
+                    )}
+                }
         
 //        func loadImage() {
 //            guard let inputImage = SaveUIImage else {
