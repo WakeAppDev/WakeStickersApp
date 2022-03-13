@@ -10,6 +10,7 @@ struct TabView2: View {
         }
     
     var body: some View {
+        VStack{
         NavigationView{
             VStack{
             Form{
@@ -33,6 +34,9 @@ struct TabView2: View {
             .navigationTitle ("About")
             }
         }
+        Spacer()
+        Text("Built with heart")
+        }
     }
 }
 
@@ -40,7 +44,9 @@ struct TabView2: View {
 struct Privacy: View {
     
     var body: some View {
-        Text("Hello, here is privacy view!")
+        Link("View Our Privacy Policy Here", destination: URL(string: "https://sites.google.com/wfu.edu/deacon-emojis-privacy-policy/home")!)
+            .font(.title)
+            .foregroundColor(Color("New Gold"))
     }
 }
 
