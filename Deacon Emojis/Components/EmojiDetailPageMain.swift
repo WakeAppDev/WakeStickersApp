@@ -83,9 +83,9 @@ struct topBarView: View {
         HStack {
             //VStack{
                 Text(emojis.name + " Deacon")
-                    .font(.system(size: 33, weight: .bold, design: .serif))
+                .font(.system(size: 37, weight: .bold, design: .rounded))
                     .foregroundColor(.black)
-                    .shadow(color: Color.black.opacity(0.2), radius: 2, x: 5, y: 5)
+                    .shadow(color: Color.black.opacity(0.2), radius: 2, x: 4, y: 4)
                     .frame(alignment: .leading)
                     .padding(.horizontal, 30)
             //}
@@ -129,7 +129,7 @@ struct emojiDisplay: View {
             .shadow(color: Color(UIColor(named: "New Gold")!), radius: 60)
 
         Text(emojis.name)
-            .font(.system(size: 28, weight: .bold, design: .serif))
+                .font(.system(size: 28, weight: .bold, design: .rounded))
             .foregroundColor(Color.black.opacity(0.8))
             .padding(.top, 3)
             .frame(maxWidth:.infinity, alignment:.center)
