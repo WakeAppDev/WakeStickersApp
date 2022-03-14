@@ -77,6 +77,7 @@ struct Privacy: View {
             Link("Check Our Privacy Policy Here", destination: URL(string: "https://sites.google.com/wfu.edu/deacon-emojis-privacy-policy/home")!)
                 .font(.system(size: 33, weight: .bold, design: .rounded))
                 .foregroundColor(Color("New Gold"))
+                .multilineTextAlignment(.center)
                 .frame(alignment: .center)
                 .padding(.bottom,6)
             }
@@ -119,13 +120,14 @@ struct AppDev: View {
                     .frame(width:300, height: 300)
                     .padding(.bottom,2)
                 Text("WFUAppDev@outlook.com")
-                    .font(.system(size: 22, weight: .bold, design: .rounded))
+                    .font(.system(size: 25, weight: .bold, design: .rounded))
                     .foregroundColor(.blue)
                     .padding(.bottom, 2)
                 Text("If you have any questions, please contact us through the email above")
-                    .font(.system(size: 18, weight: .bold, design: .rounded))
+                    .font(.system(size: 20, weight: .bold, design: .rounded))
                     .foregroundColor(.black)
-                    .padding(.horizontal, 35)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 30)
 //                Text("Richard, Michael, Jiachen, Jessica")
 //                    .font(.system(size: 16, weight: .bold, design: .monospaced))
 //                    .foregroundColor(.black)
@@ -142,18 +144,40 @@ struct AppDev: View {
 struct Legal: View {
     
     var body: some View {
-        ScrollView(.vertical){
+        
         VStack{
-            Text("Deacon Emojis Lego Info").font(.title).foregroundColor(Color("New Gold")).padding(.bottom, 20.0)
             
-            Text("1. We don't have an account system in this mobile application. \n2. When you want to save any sticker to your photos, you need to agree the access to photos.\n3. This mobile application and all the stickers it includes are designed and created by AppDev.\n4. Except for the access to photos, we won't request any other permission or collect any information regarding your privacy.").foregroundColor(Color("New Gold")).padding(.bottom, 20.0).lineSpacing(20)
-            Image("200").resizable()
-                .cornerRadius(10)
-                .frame(width: 80, height: 80)
-            Text("version: 1.0").foregroundColor(.gray)
-            Spacer()
-        }.padding(20)
-        }
+            HStack {
+                Spacer()
+                
+                Text("Deacon Emojis Legal Info")
+                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                    .foregroundColor(.black)
+                    .shadow(color: Color.black.opacity(0.2), radius: 0.6, x: 1, y: 1)
+                Spacer()
+            }
+            .frame(alignment: .topLeading)
+            .padding(.bottom, 30)
+            
+
+            VStack {
+                Text("1. We don't have an account system in this mobile application. \n2. When you want to save any sticker to your photos, you need to agree the access to photos.\n3. This mobile application and all the stickers it includes are designed and created by AppDev.\n4. Except for the access to photos, we won't request any other permission or collect any information regarding your privacy.")
+                        .font(.system(size: 16, weight: .bold, design: .rounded))
+                        .foregroundColor(.black)
+                        .lineSpacing(15)
+                        .padding(.bottom, 25)
+                        
+                
+                Image("200").resizable()
+                    .cornerRadius(10)
+                    .frame(width: 80, height: 80)
+                
+                Text("Version: 1.0").foregroundColor(.gray)
+                
+                Spacer()
+            }.padding(.horizontal, 30)
+        }.padding(.top, 30)
+        
     }
 }
 
