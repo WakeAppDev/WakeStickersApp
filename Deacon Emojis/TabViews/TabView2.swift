@@ -13,7 +13,6 @@ struct TabView2: View {
         NavigationView{
             VStack {
                 Form{
-                    
                     Section{
                         NavigationLink (destination: Privacy()) {
                                 Text("Privacy Policy")
@@ -35,7 +34,7 @@ struct TabView2: View {
                 
                 Spacer()
                         
-                Text("— DESIGNED AND DEVELOPED WITH ♥ —")
+                Text("—— DESIGNED AND DEVELOPED WITH ♥ ——")
                     .font(.system(size: 15, weight: .medium, design: .rounded))
                     .foregroundColor(.gray)
                     .shadow(color: Color.black.opacity(0.2), radius: 0.6, x: 1, y: 1)
@@ -73,7 +72,7 @@ struct Privacy: View {
                 .cornerRadius(10)
                 .frame(width:300, height: 300)
                 .padding(.bottom,2)
-                
+            
             HStack {
             Link("Check Our Privacy Policy Here", destination: URL(string: "https://sites.google.com/wfu.edu/deacon-emojis-privacy-policy/home")!)
                 .font(.system(size: 33, weight: .bold, design: .rounded))
@@ -145,7 +144,7 @@ struct AppDev: View {
 struct Legal: View {
     
     var body: some View {
-        
+        ScrollView{
         VStack{
             
             HStack {
@@ -162,7 +161,7 @@ struct Legal: View {
             
 
             VStack {
-                Text("1. We don't have an account system in this mobile application. \n2. When you want to save any sticker to your photos, you need to agree the access to your photo album.\n3. This mobile application and all the stickers it includes are designed and created by the WFU AppDev.\n4. Except for the access to photos, we won't request any other permission or collect any information regarding your privacy.")
+                Text("1. We don't have an account system in this mobile application. \n2. When you want to save any sticker to your photos, you need to agree the access to photos.\n3. This mobile application and all the stickers it includes are designed and created by AppDev.\n4. Except for the access to photos, we won't request any other permission or collect any information regarding your privacy.")
                         .font(.system(size: 16, weight: .bold, design: .rounded))
                         .foregroundColor(.black)
                         .lineSpacing(15)
@@ -178,7 +177,7 @@ struct Legal: View {
                 Spacer()
             }.padding(.horizontal, 30)
         }.padding(.top, 30)
-        
+        }
     }
 }
 
