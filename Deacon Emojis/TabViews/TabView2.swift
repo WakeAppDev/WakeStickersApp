@@ -13,6 +13,7 @@ struct TabView2: View {
         NavigationView{
             VStack {
                 Form{
+                    
                     Section{
                         NavigationLink (destination: Privacy()) {
                                 Text("Privacy Policy")
