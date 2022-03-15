@@ -35,7 +35,7 @@ struct TabView2: View {
                 
                 Spacer()
                         
-                Text("—— DESIGNED AND DEVELOPED WITH ♥ ——")
+                Text("— DESIGNED AND DEVELOPED WITH ♥ —")
                     .font(.system(size: 15, weight: .medium, design: .rounded))
                     .foregroundColor(.gray)
                     .shadow(color: Color.black.opacity(0.2), radius: 0.6, x: 1, y: 1)
