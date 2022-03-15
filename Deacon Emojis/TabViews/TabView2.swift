@@ -67,7 +67,7 @@ struct Privacy: View {
         
             VStack (spacing: 30){
             
-            Image("Privacy")
+            Image("Privacy ")
                 .resizable(resizingMode:.stretch)
                 .aspectRatio(contentMode:.fit)
                 .cornerRadius(10)
