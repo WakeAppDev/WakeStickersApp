@@ -173,6 +173,12 @@ struct Legal: View {
                         .foregroundColor(.black)
                         .lineSpacing(15)
                         .padding(.bottom, 25)
+                
+                Text("1. We don't have an account system in this mobile application. \n2. When you want to save any sticker to your photos, you need to agree the access to your photo album.\n3. This mobile application and all the stickers it includes are designed and created by the WFU AppDev.\n4. Except for the access to photos, we won't request any other permission or collect any information regarding your privacy.")
+                        .font(.system(size: 16, weight: .bold, design: .rounded))
+                        .foregroundColor(.black)
+                        .lineSpacing(15)
+                        .padding(.bottom, 25)
                         
                 
                 Image("200").resizable()
