@@ -39,8 +39,7 @@ struct EmojiDetailPageMain: View {
                                 //跳转iMessage分享图片
                                 iMessageView(imageName: "105", emojis: thisEmojis)
             
-                                SquareView(imageName: "101")
-//                                  instagram分享到快拍
+                                //instagram分享到快拍
                                 if InstagramSharingUtils.canOpenInstagramStories {
                                         Button(action: {
                                           InstagramSharingUtils.shareToInstagramStories(thisPageEmojiUIimage)
@@ -52,9 +51,10 @@ struct EmojiDetailPageMain: View {
                                           Image("102").resizable()
                                               .frame(width: 80, height: 80)
                                       }
-                                SquareView(imageName: "103")
-                                SquareView(imageName: "100")
-                                SquareView(imageName: "104")
+                                
+                                SquareView(imageName: "103", emojis: thisEmojis)
+                                SquareView(imageName: "100", emojis: thisEmojis)
+                                SquareView(imageName: "104", emojis: thisEmojis)
                             }.padding()
                         }.frame(height: 150)
                     }
@@ -103,16 +103,20 @@ struct topBarView: View {
 
 struct SquareView: View {
     var imageName: String
+    var emojis: Emojis
 
     var body: some View {
-    Button(action: {
+        Button(action: {
+            guard let image2 = UIImage(named: emojis.Index) else { return }
             
-        }, label: {
-            Image(imageName)
-                .resizable()
-                .frame(width: 80, height: 80)
+            let activityVC = UIActivityViewController(activityItems: [image2], applicationActivities: nil)
+                    UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+            }, label: {
+                Image(imageName)
+                    .resizable()
+                    .frame(width: 80, height: 80)
 
-        })
+            })
     }
 }
 
