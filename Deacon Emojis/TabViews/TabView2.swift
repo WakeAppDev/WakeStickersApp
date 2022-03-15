@@ -73,6 +73,13 @@ struct Privacy: View {
                 .cornerRadius(10)
                 .frame(width:300, height: 300)
                 .padding(.bottom,2)
+                
+            Image("Privacy")
+                .resizable(resizingMode:.stretch)
+                .aspectRatio(contentMode:.fit)
+                .cornerRadius(10)
+                .frame(width:300, height: 300)
+                .padding(.bottom,2)
             
             HStack {
             Link("Check Our Privacy Policy Here", destination: URL(string: "https://sites.google.com/wfu.edu/deacon-emojis-privacy-policy/home")!)
