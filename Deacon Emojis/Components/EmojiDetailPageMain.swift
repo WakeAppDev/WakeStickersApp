@@ -9,6 +9,8 @@ import SwiftUI
 import UIKit
 import MobileCoreServices
 import CoreAudio
+import MessageUI
+//import Social
 
 
 struct EmojiDetailPageMain: View {
@@ -51,6 +53,23 @@ struct EmojiDetailPageMain: View {
                                           Image("102").resizable()
                                               .frame(width: 80, height: 80)
                                       }
+//                                facebook fail-
+//                                if let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter) {
+//                                        Button(action: {
+//                                            vc.setInitialText("Look at this great picture!")
+//                                            vc.add(UIImage(named: thisEmojis.Index)!)
+////                                            present(vc, animated: true)
+//
+//                                        }) {
+//                                            Image("101").resizable()
+//                                                .frame(width: 80, height: 80)
+//
+//                                        }
+//                                      } else {
+//                                          Image("101").resizable()
+//                                              .frame(width: 80, height: 80)
+//                                      }
+                                
                                 
                                 SquareView(imageName: "103", emojis: thisEmojis)
                                 SquareView(imageName: "100", emojis: thisEmojis)
@@ -202,7 +221,6 @@ struct iMessageView: View {
         })
     }
 }
-
 
 
 
